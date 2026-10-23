@@ -1,6 +1,6 @@
 # Grow and Survive
 
-*(Proposal title: "The Colony Was Automated" / "Colony Engine")*
+*(Proposal title: "Grow and Survive" / "Colony Engine")*
 
 Grow and Survive is a 2D colony-management game built with **Godot 4 (GDScript)**.
 You do not control ants directly. Instead you **program them**: each ant role
