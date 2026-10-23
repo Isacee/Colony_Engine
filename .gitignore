@@ -1,0 +1,32 @@
+# Godot editor cache and local export credentials
+.godot/
+export_credentials.cfg
+
+# Private credentials and local secrets (never commit these)
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# Generated documents
+*.pdf
+
+# Local editor configuration
+.vscode/
+
+# Exported builds
+*.exe
+*.pck
+/build/
+/dist/
+
+# Local Python environment and generated files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Operating system files
+.DS_Store
+Thumbs.db

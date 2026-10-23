@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://cpq7bnwivo8h7"]
+
+[ext_resource type="Script" uid="uid://3q1rr5nv107f" path="res://Scripts/UI/main_menu.gd" id="1_menu"]
+[ext_resource type="Script" uid="uid://sm4iflmei2n" path="res://Scripts/UI/save_slots_panel.gd" id="2_save_slots"]
+
+[node name="MainMenu" type="Control" unique_id=219324103]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_menu")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1371186392]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.608, 0.831, 0.765, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1303075896]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="CenterContainer" unique_id=619576753]
+custom_minimum_size = Vector2(380, 0)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="CenterContainer/Panel" unique_id=1610674906]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 28
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBox" type="VBoxContainer" parent="CenterContainer/Panel/Margin" unique_id=1958010689]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Title" type="Label" parent="CenterContainer/Panel/Margin/VBox" unique_id=1795646100]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Grow and Survive"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="CenterContainer/Panel/Margin/VBox" unique_id=355377924]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Build and command your ant colony"
+horizontal_alignment = 1
+
+[node name="Spacer" type="Control" parent="CenterContainer/Panel/Margin/VBox" unique_id=2116571352]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="DifficultyLabel" type="Label" parent="CenterContainer/Panel/Margin/VBox" unique_id=1055445697]
+layout_mode = 2
+text = "Difficulty"
+horizontal_alignment = 1
+
+[node name="DifficultyPicker" type="OptionButton" parent="CenterContainer/Panel/Margin/VBox" unique_id=117334817]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="CenterContainer/Panel/Margin/VBox" unique_id=1383605488]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+text = "Start Game"
+
+[node name="LoadButton" type="Button" parent="CenterContainer/Panel/Margin/VBox" unique_id=1187586743]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+text = "Load Game"
+
+[node name="QuitButton" type="Button" parent="CenterContainer/Panel/Margin/VBox" unique_id=1289870544]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+text = "Quit"
+
+[node name="SaveSlotsPanel" type="Control" parent="." unique_id=501902514]
+unique_name_in_owner = true
+anchors_preset = 0
+script = ExtResource("2_save_slots")

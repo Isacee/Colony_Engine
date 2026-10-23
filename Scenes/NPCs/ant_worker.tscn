@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://c17bolr2bdaaw"]
+
+[ext_resource type="Texture2D" uid="uid://bmnu2biafrmm5" path="res://Assets/Ants.png" id="1_cg83h"]
+[ext_resource type="Script" uid="uid://nnrc0oecckd8" path="res://Scripts/ant_worker.gd" id="1_ctfq0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ctfq0"]
+atlas = ExtResource("1_cg83h")
+region = Rect2(810, 0, 90, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hnm6n"]
+atlas = ExtResource("1_cg83h")
+region = Rect2(900, 0, 90, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eurkt"]
+atlas = ExtResource("1_cg83h")
+region = Rect2(990, 0, 90, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mrfga"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ctfq0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hnm6n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eurkt")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Ant Worker" type="Node2D" unique_id=899072338]
+script = ExtResource("1_ctfq0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=711607702]
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_mrfga")

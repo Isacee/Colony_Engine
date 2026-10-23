@@ -1,0 +1,15 @@
+# Example ant behavior script (worker profile).
+# Paste it into the in-game Rules Editor, or save it as user://colony_rules.txt.
+# Ants follow the first matching rule from top to bottom.
+# Syntax: "define name = condition" or "condition: action"
+define worker_building = worker and construction_available
+define worker_near_material = worker and material_near
+critical_health and near_nest: rest
+critical_health: flee
+bug_near: flee
+food_full: return
+materials_full: return
+worker_building: build
+worker_near_material: collect_material
+worker: collect_food
+always: idle

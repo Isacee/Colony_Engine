@@ -1,0 +1,85 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scripts/UI/hud.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://Scenes/UI/rules_editor.tscn" id="2_rules"]
+[ext_resource type="Script" path="res://Scripts/UI/save_slots_panel.gd" id="3_save_slots"]
+[ext_resource type="Texture2D" path="res://Assets/Complete_UI_Essential_Pack_Free/01_Flat_Theme/Sprites/UI_Flat_Frame01a.png" id="4_bar_frame"]
+
+[sub_resource type="StyleBoxTexture" id="BarFrame"]
+texture = ExtResource("4_bar_frame")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
+content_margin_left = 16.0
+content_margin_top = 4.0
+content_margin_right = 16.0
+content_margin_bottom = 4.0
+
+[node name="Hud" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_script")
+
+[node name="TopBar" type="PanelContainer" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 76.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("BarFrame")
+
+[node name="Row" type="HBoxContainer" parent="TopBar"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="StatusLabel" type="Label" parent="TopBar/Row"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+vertical_alignment = 1
+[node name="WorkerButton" type="Button" parent="TopBar/Row"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "+ Worker"
+[node name="ExplorerButton" type="Button" parent="TopBar/Row"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "+ Explorer"
+[node name="DefenderButton" type="Button" parent="TopBar/Row"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "+ Defender"
+[node name="PauseButton" type="Button" parent="TopBar/Row"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Pause"
+[node name="ResetButton" type="Button" parent="TopBar/Row"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Reset"
+[node name="RulesButton" type="Button" parent="TopBar/Row"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Edit Rules"
+[node name="BehaviorOverlayButton" type="Button" parent="TopBar/Row"]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+text = "Behavior Overlay"
+[node name="SaveSlotsButton" type="Button" parent="TopBar/Row"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Save Slots"
+[node name="MenuButton" type="Button" parent="TopBar/Row"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Menu"
+[node name="HelpButton" type="Button" parent="TopBar/Row"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(36, 0)
+text = "?"
+[node name="RulesEditor" parent="." instance=ExtResource("2_rules")]
+unique_name_in_owner = true
+[node name="SaveSlotsPanel" type="Control" parent="."]
+unique_name_in_owner = true
+script = ExtResource("3_save_slots")

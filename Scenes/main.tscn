@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://djmnc02brmchk"]
+
+[ext_resource type="Script" uid="uid://b3pqdmi4wtajy" path="res://Scripts/game_controller.gd" id="1_main"]
+[ext_resource type="TileSet" uid="uid://cs2qu2xih4f7v" path="res://Resources/world_tileset.tres" id="2_tileset"]
+[ext_resource type="Script" uid="uid://b1k4xgcepft4g" path="res://Scripts/camera_controller.gd" id="3_camera"]
+[ext_resource type="PackedScene" path="res://Scenes/UI/hud.tscn" id="4_hud"]
+
+[node name="Main" type="Node2D" unique_id=1596112068]
+script = ExtResource("1_main")
+
+[node name="Water" type="TileMapLayer" parent="." unique_id=194692683]
+tile_set = ExtResource("2_tileset")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1203524186]
+tile_set = ExtResource("2_tileset")
+
+[node name="Hills" type="TileMapLayer" parent="." unique_id=520040152]
+tile_set = ExtResource("2_tileset")
+
+[node name="Camera" type="Camera2D" parent="." unique_id=40493902]
+script = ExtResource("3_camera")
+
+[node name="Hud" parent="." unique_id=690048551 instance=ExtResource("4_hud")]

@@ -1,0 +1,161 @@
+[gd_resource type="Theme" format=3 uid="uid://dg04jqol5acv2"]
+
+[ext_resource type="Texture2D" uid="uid://dwa3vwkdxuwa2" path="res://Assets/Complete_UI_Essential_Pack_Free/01_Flat_Theme/Sprites/UI_Flat_Button01a_1.png" id="1_button_normal"]
+[ext_resource type="Texture2D" uid="uid://cyg7s01vebe70" path="res://Assets/Complete_UI_Essential_Pack_Free/01_Flat_Theme/Sprites/UI_Flat_Button01a_2.png" id="2_button_hover"]
+[ext_resource type="Texture2D" uid="uid://dw4qmvpe603wh" path="res://Assets/Complete_UI_Essential_Pack_Free/01_Flat_Theme/Sprites/UI_Flat_Button01a_3.png" id="3_button_pressed"]
+[ext_resource type="Texture2D" uid="uid://c3olo8h88h2kr" path="res://Assets/Complete_UI_Essential_Pack_Free/01_Flat_Theme/Sprites/UI_Flat_Button01a_4.png" id="4_button_disabled"]
+[ext_resource type="Texture2D" uid="uid://cl5o76kk726mk" path="res://Assets/Complete_UI_Essential_Pack_Free/01_Flat_Theme/Sprites/UI_Flat_Select01a_1.png" id="5_select_normal"]
+[ext_resource type="Texture2D" uid="uid://cpgeqawmvwrbs" path="res://Assets/Complete_UI_Essential_Pack_Free/01_Flat_Theme/Sprites/UI_Flat_Select01a_2.png" id="6_select_hover"]
+[ext_resource type="Texture2D" uid="uid://cspahw4bqcrqe" path="res://Assets/Complete_UI_Essential_Pack_Free/01_Flat_Theme/Sprites/UI_Flat_Select01a_3.png" id="7_select_pressed"]
+[ext_resource type="Texture2D" uid="uid://4wprvudyeehg" path="res://Assets/Complete_UI_Essential_Pack_Free/01_Flat_Theme/Sprites/UI_Flat_Select01a_4.png" id="8_select_disabled"]
+[ext_resource type="Texture2D" uid="uid://n7ysihgkoqfx" path="res://Assets/Complete_UI_Essential_Pack_Free/01_Flat_Theme/Sprites/UI_Flat_Frame01a.png" id="9_panel"]
+[ext_resource type="Texture2D" uid="uid://bseiug1lqi4ta" path="res://Assets/Complete_UI_Essential_Pack_Free/01_Flat_Theme/Sprites/UI_Flat_InputField01a.png" id="10_input"]
+[ext_resource type="Texture2D" uid="uid://cnpj82c2fv2t7" path="res://Assets/Complete_UI_Essential_Pack_Free/01_Flat_Theme/Sprites/UI_Flat_IconDropdown01a.png" id="11_dropdown"]
+
+[sub_resource type="StyleBoxTexture" id="ButtonDisabled"]
+content_margin_left = 12.0
+content_margin_top = 8.0
+content_margin_right = 12.0
+content_margin_bottom = 8.0
+texture = ExtResource("4_button_disabled")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="ButtonHover"]
+content_margin_left = 12.0
+content_margin_top = 8.0
+content_margin_right = 12.0
+content_margin_bottom = 8.0
+texture = ExtResource("2_button_hover")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="ButtonNormal"]
+content_margin_left = 12.0
+content_margin_top = 8.0
+content_margin_right = 12.0
+content_margin_bottom = 8.0
+texture = ExtResource("1_button_normal")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="ButtonPressed"]
+content_margin_left = 12.0
+content_margin_top = 8.0
+content_margin_right = 12.0
+content_margin_bottom = 8.0
+texture = ExtResource("3_button_pressed")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="InputFocus"]
+content_margin_left = 10.0
+content_margin_top = 8.0
+content_margin_right = 10.0
+content_margin_bottom = 8.0
+texture = ExtResource("10_input")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="InputNormal"]
+content_margin_left = 10.0
+content_margin_top = 8.0
+content_margin_right = 10.0
+content_margin_bottom = 8.0
+texture = ExtResource("10_input")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="SelectDisabled"]
+content_margin_left = 12.0
+content_margin_top = 8.0
+content_margin_right = 28.0
+content_margin_bottom = 8.0
+texture = ExtResource("8_select_disabled")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="SelectHover"]
+content_margin_left = 12.0
+content_margin_top = 8.0
+content_margin_right = 28.0
+content_margin_bottom = 8.0
+texture = ExtResource("6_select_hover")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="SelectNormal"]
+content_margin_left = 12.0
+content_margin_top = 8.0
+content_margin_right = 28.0
+content_margin_bottom = 8.0
+texture = ExtResource("5_select_normal")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="SelectPressed"]
+content_margin_left = 12.0
+content_margin_top = 8.0
+content_margin_right = 28.0
+content_margin_bottom = 8.0
+texture = ExtResource("7_select_pressed")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="PanelFrame"]
+content_margin_left = 20.0
+content_margin_top = 16.0
+content_margin_right = 20.0
+content_margin_bottom = 16.0
+texture = ExtResource("9_panel")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
+
+[resource]
+default_font_size = 16
+Button/colors/font_color = Color(0.16, 0.19, 0.16, 1)
+Button/colors/font_disabled_color = Color(0.4, 0.42, 0.4, 1)
+Button/colors/font_hover_color = Color(0.1, 0.14, 0.11, 1)
+Button/colors/font_pressed_color = Color(0.1, 0.14, 0.11, 1)
+Button/styles/disabled = SubResource("ButtonDisabled")
+Button/styles/hover = SubResource("ButtonHover")
+Button/styles/normal = SubResource("ButtonNormal")
+Button/styles/pressed = SubResource("ButtonPressed")
+Label/colors/font_color = Color(0.12, 0.17, 0.14, 1)
+LineEdit/colors/font_color = Color(0.12, 0.17, 0.14, 1)
+LineEdit/styles/focus = SubResource("InputFocus")
+LineEdit/styles/normal = SubResource("InputNormal")
+OptionButton/icons/arrow = ExtResource("11_dropdown")
+OptionButton/styles/disabled = SubResource("SelectDisabled")
+OptionButton/styles/hover = SubResource("SelectHover")
+OptionButton/styles/normal = SubResource("SelectNormal")
+OptionButton/styles/pressed = SubResource("SelectPressed")
+Panel/styles/panel = SubResource("PanelFrame")
+PanelContainer/styles/panel = SubResource("PanelFrame")
+PopupMenu/styles/panel = SubResource("PanelFrame")
+RichTextLabel/colors/default_color = Color(0.12, 0.17, 0.14, 1)
+TextEdit/colors/font_color = Color(0.12, 0.17, 0.14, 1)
+TextEdit/styles/focus = SubResource("InputFocus")
+TextEdit/styles/normal = SubResource("InputNormal")

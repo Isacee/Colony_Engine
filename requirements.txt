@@ -1,0 +1,2 @@
+# Only needed for tools/make_proposal_pdf.py (the game itself needs no Python packages).
+reportlab>=4.0

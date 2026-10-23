@@ -1,0 +1,127 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scripts/UI/rules_editor.gd" id="1_script"]
+
+[node name="RulesEditor" type="PanelContainer"]
+visible = false
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -476.0
+offset_top = 90.0
+offset_right = -16.0
+offset_bottom = -20.0
+grow_horizontal = 0
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Heading" type="Label" parent="VBox"]
+layout_mode = 2
+text = "ANT BEHAVIOR RULES"
+
+[node name="Help" type="Label" parent="VBox"]
+layout_mode = 2
+text = "Each ant role has its own script. Test a draft against a sample before applying it; preview never changes the live colony."
+autowrap_mode = 3
+
+[node name="ProfileRow" type="HBoxContainer" parent="VBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="ProfileLabel" type="Label" parent="VBox/ProfileRow"]
+layout_mode = 2
+text = "Editing:"
+vertical_alignment = 1
+
+[node name="ProfilePicker" type="OptionButton" parent="VBox/ProfileRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="Builder" type="HBoxContainer" parent="VBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="ConditionPicker" type="OptionButton" parent="VBox/Builder"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ActionPicker" type="OptionButton" parent="VBox/Builder"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AddRuleButton" type="Button" parent="VBox/Builder"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Add Rule"
+
+[node name="Editor" type="CodeEdit" parent="VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 180)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Choices" type="Label" parent="VBox"]
+layout_mode = 2
+text = "Separate scripts: Worker, Explorer, Defender, Guard
+Use the menus to browse all conditions and actions, including health, cargo, danger, and colony state. See Tutorial for the full reference.
+Reusable: define name = condition (put definitions before rules). Logic: and, or, not, ( )
+Counters: deliveries, harvests, action_seconds, health (for example deliveries >= 3: rest)"
+autowrap_mode = 3
+
+[node name="Buttons" type="HBoxContainer" parent="VBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="ApplyButton" type="Button" parent="VBox/Buttons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Apply Rules"
+
+[node name="ExampleButton" type="Button" parent="VBox/Buttons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Use Example"
+
+[node name="TutorialButton" type="Button" parent="VBox/Buttons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Tutorial"
+
+[node name="PreviewRow" type="HBoxContainer" parent="VBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="PreviewPicker" type="OptionButton" parent="VBox/PreviewRow"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TestDraftButton" type="Button" parent="VBox/PreviewRow"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Test Draft"
+
+[node name="PreviewOutput" type="Label" parent="VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+autowrap_mode = 3
+text = "Test the current draft against a sample situation. Preview never applies or saves rules."
+
+[node name="Feedback" type="Label" parent="VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Ready"
+autowrap_mode = 3
+
+[node name="TutorialDialog" type="AcceptDialog" parent="."]
+unique_name_in_owner = true
+title = "Rule Editor Tutorial"
